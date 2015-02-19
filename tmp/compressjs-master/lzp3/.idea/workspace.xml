@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/myrangecoder.ts" line="83" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9cd94e8a-300b-4cec-b458-0f64ed00e57e" name="Default" comment="" />
+    <ignored path="lzp3.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="lzp3" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="rangeCoder.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rangeCoder.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="9356" max-vertical-offset="10795">
+              <caret line="369" column="0" selection-start-line="318" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="binaryHeap.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/huffman/binaryHeap.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4232">
+              <caret line="111" column="2" selection-start-line="111" selection-start-column="2" selection-end-line="111" selection-end-column="2" />
+              <folding>
+                <element signature="n#!!block;n#BinaryHeap#0" expanded="true" />
+                <element signature="e#119#3257#0" expanded="true" />
+                <element signature="e#146#300#0" expanded="true" />
+                <element signature="e#320#689#0" expanded="true" />
+                <element signature="e#716#1355#0" expanded="true" />
+                <element signature="e#1376#1410#0" expanded="true" />
+                <element signature="e#1436#2067#0" expanded="true" />
+                <element signature="e#2093#3255#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="huffman.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/huffman/huffman.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="649" max-vertical-offset="2537">
+              <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="huffman2.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/huffman/huffman2.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="6154" max-vertical-offset="14345">
+              <caret line="242" column="32" selection-start-line="242" selection-start-column="32" selection-end-line="242" selection-end-column="32" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#!!block;n#constructor#0;n#HTable#0" expanded="true" />
+                <element signature="n#!!block;n#clone#0;n#HTable#0" expanded="true" />
+                <element signature="n#!!block;n#set#0;n#HTable#0" expanded="true" />
+                <element signature="n#!!block;n#constructor#0;n#Huffman#0" expanded="true" />
+                <element signature="n#!!block;n#split#0;n#Huffman#0" expanded="true" />
+                <element signature="n#!!block;n#leader#0;n#Huffman#0" expanded="true" />
+                <element signature="n#!!block;n#slide#0;n#Huffman#0" expanded="true" />
+                <element signature="n#!!block;n#scale#0;n#Huffman#0" expanded="true" />
+                <element signature="n#!!block;n#sendid#0;n#Huffman#0" expanded="true" />
+                <element signature="n#!!block;n#encode#0;n#Huffman#0" expanded="true" />
+                <element signature="n#!!block;n#readid#0;n#Huffman#0" expanded="true" />
+                <element signature="n#!!block;n#decode#0;n#Huffman#0" expanded="true" />
+                <element signature="n#!!block;n#compressFile#0;n#Huffman#0" expanded="true" />
+                <element signature="n#!!block;n#decompressFile#0;n#Huffman#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rangeCoder.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/huffman/rangeCoder.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.29742962" vertical-offset="0" max-vertical-offset="7108">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#972#1255#0" expanded="true" />
+                <element signature="e#1440#2261#0" expanded="true" />
+                <element signature="e#2519#2632#0" expanded="true" />
+                <element signature="e#3100#3341#0" expanded="true" />
+                <element signature="e#3407#3616#0" expanded="true" />
+                <element signature="e#3699#3736#0" expanded="true" />
+                <element signature="e#3821#3854#0" expanded="true" />
+                <element signature="e#3941#3975#0" expanded="true" />
+                <element signature="e#4156#5025#0" expanded="true" />
+                <element signature="e#5263#5519#0" expanded="true" />
+                <element signature="e#5569#5931#0" expanded="true" />
+                <element signature="e#6332#6534#0" expanded="true" />
+                <element signature="e#6591#6844#0" expanded="true" />
+                <element signature="e#7237#7416#0" expanded="true" />
+                <element signature="e#7499#7588#0" expanded="true" />
+                <element signature="e#7671#7760#0" expanded="true" />
+                <element signature="e#7845#7936#0" expanded="true" />
+                <element signature="e#8010#8088#0" expanded="true" />
+                <element signature="e#8092#8116#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="huffman3.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/huffman/huffman3.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="30637" max-vertical-offset="42641">
+              <caret line="1372" column="27" selection-start-line="1372" selection-start-column="27" selection-end-line="1372" selection-end-column="27" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="huffman2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/huffman/huffman2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1456" max-vertical-offset="4246">
+              <caret line="305" column="22" selection-start-line="305" selection-start-column="22" selection-end-line="305" selection-end-column="22" />
+              <folding>
+                <element signature="e#11137#11944#0" expanded="true" />
+                <element signature="e#12020#12869#0" expanded="true" />
+                <marker date="1423843025532" expanded="true" signature="2563:13552" placeholder="{...}" />
+                <marker date="1423843025532" expanded="false" signature="3873:3984" placeholder="{...}" />
+                <marker date="1423843025532" expanded="false" signature="3874:3978" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/huffman/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.59375" vertical-offset="0" max-vertical-offset="1527">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/huffman/test.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1201">
+              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lzw.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/huffman/lzw.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2693">
+              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+              <folding>
+                <element signature="n#!!block;n#decode#0;n#LZW#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/lzp3lib/lib/Context1Model.js" />
+        <option value="$PROJECT_DIR$/lzp3lib/lib/NoModel.js" />
+        <option value="$PROJECT_DIR$/lzp3lib/lib/Lzp3.js" />
+        <option value="$PROJECT_DIR$/lzp3lib/lib/Util.js" />
+        <option value="$PROJECT_DIR$/lzp3lib/lib/Stream.js" />
+        <option value="$PROJECT_DIR$/lzp3lib/lib/HuffmanAllocator.js" />
+        <option value="$PROJECT_DIR$/lzp3lib/main.js" />
+        <option value="$PROJECT_DIR$/lzp3lib/lib/FenwickModel.js" />
+        <option value="$PROJECT_DIR$/file.js" />
+        <option value="$PROJECT_DIR$/lib/Main.js" />
+        <option value="$PROJECT_DIR$/lib/Stream.js" />
+        <option value="$PROJECT_DIR$/lib/NoModel.js" />
+        <option value="$PROJECT_DIR$/lib/Lzp3.js" />
+        <option value="$PROJECT_DIR$/lib/LogDistanceModel.js" />
+        <option value="$PROJECT_DIR$/lib/Context1Model.js" />
+        <option value="$PROJECT_DIR$/lib/FenwickModel.js" />
+        <option value="$PROJECT_DIR$/lib/Util.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/test.js" />
+        <option value="$PROJECT_DIR$/lib/RangeCoder.js" />
+        <option value="$PROJECT_DIR$/lib/RangeCoderCompressor.js" />
+        <option value="$PROJECT_DIR$/myrangecoder.js" />
+        <option value="$PROJECT_DIR$/myrangecoder.ts" />
+        <option value="$PROJECT_DIR$/rangeCoder.js" />
+        <option value="$PROJECT_DIR$/binaryTree.ts" />
+        <option value="$PROJECT_DIR$/rangeCoder.ts" />
+        <option value="$PROJECT_DIR$/huffman/index.html" />
+        <option value="$PROJECT_DIR$/huffman/huffman.ts" />
+        <option value="$PROJECT_DIR$/huffman/lzw.ts" />
+        <option value="$PROJECT_DIR$/huffman/test.ts" />
+        <option value="$PROJECT_DIR$/huffman/huffman2.ts" />
+        <option value="$PROJECT_DIR$/huffman/huffman3.ts" />
+        <option value="$PROJECT_DIR$/huffman/rangeCoder.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="2576" />
+    <option name="height" value="1416" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lzp3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lzp3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lzp3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lzp3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lzp3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rangeCoder.ts" />
+              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lzp3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lzp3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lzp3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lzp3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="huffman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.ts" />
+              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lzp3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lzp3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="huffman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="D:/Projects/Git/Sources/HTML5/take5/games/wpt/tools/node/node.exe" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="options.lastSelected" value="liveEdit" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\cloud\bittorent-sync-work\javascript\my\compressjs-master\lzp3\huffman" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/lzp3/index.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="rangeCoder.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="D:/Projects/Git/Sources/HTML5/take5/games/wpt/tools/node/node" path-to-js-file="rangeCoder.js" working-dir="$PROJECT_DIR$">
+      <RunnerSettings RunnerId="debuggableProgram" />
+      <ConfigurationWrapper RunnerId="debuggableProgram" />
+      <method />
+    </configuration>
+    <configuration default="false" name="index.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/lzp3/huffman/index.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <method />
+    </configuration>
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.rangeCoder.js" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
+    </list>
+    <recent_temporary>
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.rangeCoder.js" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9cd94e8a-300b-4cec-b458-0f64ed00e57e" name="Default" comment="" />
+      <created>1423151525500</created>
+      <option name="number" value="Default" />
+      <updated>1423151525500</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286052" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27334398" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32939324" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3995272" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/rangeCoder.ts</url>
+          <line>249</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="javascript-exception">
+          <properties />
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="27" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="NodeJSConfigurationType">
+        <watch expression="cm" language="TypeScript" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lib/Context1Model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+            <element signature="e#153#356#0" expanded="false" />
+            <element signature="e#415#460#0" expanded="false" />
+            <element signature="e#515#565#0" expanded="false" />
+            <element signature="e#569#593#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding>
+            <element signature="e#258#1098#0" expanded="false" />
+            <element signature="e#433#550#0" expanded="false" />
+            <element signature="e#610#877#0" expanded="false" />
+            <element signature="e#1151#1244#0" expanded="false" />
+            <element signature="e#1363#1632#0" expanded="false" />
+            <element signature="e#1684#2077#0" expanded="false" />
+            <element signature="e#2453#3033#0" expanded="false" />
+            <element signature="e#2945#3007#0" expanded="false" />
+            <element signature="e#4598#5451#0" expanded="false" />
+            <element signature="e#4645#5444#0" expanded="false" />
+            <element signature="e#5571#5864#0" expanded="false" />
+            <element signature="e#5987#6250#0" expanded="false" />
+            <element signature="e#6257#6323#0" expanded="false" />
+            <element signature="e#6375#6848#0" expanded="false" />
+            <element signature="e#6855#6920#0" expanded="false" />
+            <element signature="e#6967#7240#0" expanded="false" />
+            <element signature="e#7339#7452#0" expanded="false" />
+            <element signature="e#7494#7543#0" expanded="false" />
+            <element signature="e#7882#7921#0" expanded="false" />
+            <element signature="e#8030#8068#0" expanded="false" />
+            <element signature="e#8147#8266#0" expanded="false" />
+            <element signature="e#8319#8397#0" expanded="false" />
+            <element signature="e#8420#8459#0" expanded="false" />
+            <element signature="e#8540#8661#0" expanded="false" />
+            <element signature="e#8684#8723#0" expanded="false" />
+            <element signature="e#8804#8925#0" expanded="false" />
+            <element signature="e#8948#8985#0" expanded="false" />
+            <element signature="e#9065#9184#0" expanded="false" />
+            <element signature="e#9243#9418#0" expanded="false" />
+            <element signature="e#9425#9458#0" expanded="false" />
+            <element signature="e#9477#10349#0" expanded="false" />
+            <element signature="e#10399#10560#0" expanded="false" />
+            <element signature="e#10598#11119#0" expanded="false" />
+            <element signature="e#11125#11153#0" expanded="false" />
+            <element signature="e#11183#11226#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/LogDistanceModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="3" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#424#942#0" expanded="false" />
+            <element signature="e#1142#1699#0" expanded="false" />
+            <element signature="e#1752#2058#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/FenwickModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#74#0" expanded="false" />
+            <element signature="e#149#226#0" expanded="false" />
+            <element signature="e#475#1252#0" expanded="false" />
+            <element signature="e#1316#1414#0" expanded="false" />
+            <element signature="e#1343#1410#0" expanded="false" />
+            <element signature="e#1460#1667#0" expanded="false" />
+            <element signature="e#1720#2911#0" expanded="false" />
+            <element signature="e#2967#4105#0" expanded="false" />
+            <element signature="e#4152#4338#0" expanded="false" />
+            <element signature="e#4387#5225#0" expanded="false" />
+            <element signature="e#5274#5438#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/RangeCoder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#1061#1383#0" expanded="false" />
+            <element signature="e#1577#2648#0" expanded="false" />
+            <element signature="e#2918#3064#0" expanded="false" />
+            <element signature="e#3552#3856#0" expanded="false" />
+            <element signature="e#3925#4197#0" expanded="false" />
+            <element signature="e#4286#4332#0" expanded="false" />
+            <element signature="e#4423#4465#0" expanded="false" />
+            <element signature="e#4558#4601#0" expanded="false" />
+            <element signature="e#4791#5828#0" expanded="false" />
+            <element signature="e#6081#6391#0" expanded="false" />
+            <element signature="e#6444#6875#0" expanded="false" />
+            <element signature="e#7294#7523#0" expanded="false" />
+            <element signature="e#7583#7869#0" expanded="false" />
+            <element signature="e#8280#8510#0" expanded="false" />
+            <element signature="e#8599#8709#0" expanded="false" />
+            <element signature="e#8798#8908#0" expanded="false" />
+            <element signature="e#8999#9111#0" expanded="false" />
+            <element signature="e#9191#9284#0" expanded="false" />
+            <element signature="e#9291#9315#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/RangeCoderCompressor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#779#1247#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/NoModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#200#0" expanded="false" />
+            <element signature="e#311#379#0" expanded="false" />
+            <element signature="e#421#497#0" expanded="false" />
+            <element signature="e#448#493#0" expanded="false" />
+            <element signature="e#707#834#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#getTime#0" expanded="false" />
+            <element signature="n#!!block;n#log#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Lzp3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="57" column="6" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#1167#1613#0" expanded="false" />
+            <element signature="e#1656#1765#0" expanded="false" />
+            <element signature="e#1806#1857#0" expanded="false" />
+            <element signature="e#1905#2093#0" expanded="false" />
+            <element signature="e#2215#3281#0" expanded="false" />
+            <element signature="e#3285#3433#0" expanded="false" />
+            <element signature="e#3539#5926#0" expanded="false" />
+            <element signature="e#4046#4156#0" expanded="false" />
+            <element signature="e#4180#4210#0" expanded="false" />
+            <element signature="e#5931#5985#0" expanded="false" />
+            <element signature="e#6088#8171#0" expanded="false" />
+            <element signature="e#6750#6860#0" expanded="false" />
+            <element signature="e#6885#6915#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Context1Model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+            <element signature="e#153#356#0" expanded="false" />
+            <element signature="e#415#460#0" expanded="false" />
+            <element signature="e#515#565#0" expanded="false" />
+            <element signature="e#569#593#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding>
+            <element signature="e#258#1098#0" expanded="false" />
+            <element signature="e#433#550#0" expanded="false" />
+            <element signature="e#610#877#0" expanded="false" />
+            <element signature="e#1151#1244#0" expanded="false" />
+            <element signature="e#1363#1632#0" expanded="false" />
+            <element signature="e#1684#2077#0" expanded="false" />
+            <element signature="e#2453#3033#0" expanded="false" />
+            <element signature="e#2945#3007#0" expanded="false" />
+            <element signature="e#4598#5451#0" expanded="false" />
+            <element signature="e#4645#5444#0" expanded="false" />
+            <element signature="e#5571#5864#0" expanded="false" />
+            <element signature="e#5987#6250#0" expanded="false" />
+            <element signature="e#6257#6323#0" expanded="false" />
+            <element signature="e#6375#6848#0" expanded="false" />
+            <element signature="e#6855#6920#0" expanded="false" />
+            <element signature="e#6967#7240#0" expanded="false" />
+            <element signature="e#7339#7452#0" expanded="false" />
+            <element signature="e#7494#7543#0" expanded="false" />
+            <element signature="e#7882#7921#0" expanded="false" />
+            <element signature="e#8030#8068#0" expanded="false" />
+            <element signature="e#8147#8266#0" expanded="false" />
+            <element signature="e#8319#8397#0" expanded="false" />
+            <element signature="e#8420#8459#0" expanded="false" />
+            <element signature="e#8540#8661#0" expanded="false" />
+            <element signature="e#8684#8723#0" expanded="false" />
+            <element signature="e#8804#8925#0" expanded="false" />
+            <element signature="e#8948#8985#0" expanded="false" />
+            <element signature="e#9065#9184#0" expanded="false" />
+            <element signature="e#9243#9418#0" expanded="false" />
+            <element signature="e#9425#9458#0" expanded="false" />
+            <element signature="e#9477#10349#0" expanded="false" />
+            <element signature="e#10399#10560#0" expanded="false" />
+            <element signature="e#10598#11119#0" expanded="false" />
+            <element signature="e#11125#11153#0" expanded="false" />
+            <element signature="e#11183#11226#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/LogDistanceModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="3" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#424#942#0" expanded="false" />
+            <element signature="e#1142#1699#0" expanded="false" />
+            <element signature="e#1752#2058#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/FenwickModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#74#0" expanded="false" />
+            <element signature="e#149#226#0" expanded="false" />
+            <element signature="e#475#1252#0" expanded="false" />
+            <element signature="e#1316#1414#0" expanded="false" />
+            <element signature="e#1343#1410#0" expanded="false" />
+            <element signature="e#1460#1667#0" expanded="false" />
+            <element signature="e#1720#2911#0" expanded="false" />
+            <element signature="e#2967#4105#0" expanded="false" />
+            <element signature="e#4152#4338#0" expanded="false" />
+            <element signature="e#4387#5225#0" expanded="false" />
+            <element signature="e#5274#5438#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/RangeCoder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#1061#1383#0" expanded="false" />
+            <element signature="e#1577#2648#0" expanded="false" />
+            <element signature="e#2918#3064#0" expanded="false" />
+            <element signature="e#3552#3856#0" expanded="false" />
+            <element signature="e#3925#4197#0" expanded="false" />
+            <element signature="e#4286#4332#0" expanded="false" />
+            <element signature="e#4423#4465#0" expanded="false" />
+            <element signature="e#4558#4601#0" expanded="false" />
+            <element signature="e#4791#5828#0" expanded="false" />
+            <element signature="e#6081#6391#0" expanded="false" />
+            <element signature="e#6444#6875#0" expanded="false" />
+            <element signature="e#7294#7523#0" expanded="false" />
+            <element signature="e#7583#7869#0" expanded="false" />
+            <element signature="e#8280#8510#0" expanded="false" />
+            <element signature="e#8599#8709#0" expanded="false" />
+            <element signature="e#8798#8908#0" expanded="false" />
+            <element signature="e#8999#9111#0" expanded="false" />
+            <element signature="e#9191#9284#0" expanded="false" />
+            <element signature="e#9291#9315#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/RangeCoderCompressor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#779#1247#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/NoModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#200#0" expanded="false" />
+            <element signature="e#311#379#0" expanded="false" />
+            <element signature="e#421#497#0" expanded="false" />
+            <element signature="e#448#493#0" expanded="false" />
+            <element signature="e#707#834#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#getTime#0" expanded="false" />
+            <element signature="n#!!block;n#log#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Lzp3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="57" column="6" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#1167#1613#0" expanded="false" />
+            <element signature="e#1656#1765#0" expanded="false" />
+            <element signature="e#1806#1857#0" expanded="false" />
+            <element signature="e#1905#2093#0" expanded="false" />
+            <element signature="e#2215#3281#0" expanded="false" />
+            <element signature="e#3285#3433#0" expanded="false" />
+            <element signature="e#3539#5926#0" expanded="false" />
+            <element signature="e#4046#4156#0" expanded="false" />
+            <element signature="e#4180#4210#0" expanded="false" />
+            <element signature="e#5931#5985#0" expanded="false" />
+            <element signature="e#6088#8171#0" expanded="false" />
+            <element signature="e#6750#6860#0" expanded="false" />
+            <element signature="e#6885#6915#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Context1Model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+            <element signature="e#153#356#0" expanded="false" />
+            <element signature="e#415#460#0" expanded="false" />
+            <element signature="e#515#565#0" expanded="false" />
+            <element signature="e#569#593#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding>
+            <element signature="e#258#1098#0" expanded="false" />
+            <element signature="e#433#550#0" expanded="false" />
+            <element signature="e#610#877#0" expanded="false" />
+            <element signature="e#1151#1244#0" expanded="false" />
+            <element signature="e#1363#1632#0" expanded="false" />
+            <element signature="e#1684#2077#0" expanded="false" />
+            <element signature="e#2453#3033#0" expanded="false" />
+            <element signature="e#2945#3007#0" expanded="false" />
+            <element signature="e#4598#5451#0" expanded="false" />
+            <element signature="e#4645#5444#0" expanded="false" />
+            <element signature="e#5571#5864#0" expanded="false" />
+            <element signature="e#5987#6250#0" expanded="false" />
+            <element signature="e#6257#6323#0" expanded="false" />
+            <element signature="e#6375#6848#0" expanded="false" />
+            <element signature="e#6855#6920#0" expanded="false" />
+            <element signature="e#6967#7240#0" expanded="false" />
+            <element signature="e#7339#7452#0" expanded="false" />
+            <element signature="e#7494#7543#0" expanded="false" />
+            <element signature="e#7882#7921#0" expanded="false" />
+            <element signature="e#8030#8068#0" expanded="false" />
+            <element signature="e#8147#8266#0" expanded="false" />
+            <element signature="e#8319#8397#0" expanded="false" />
+            <element signature="e#8420#8459#0" expanded="false" />
+            <element signature="e#8540#8661#0" expanded="false" />
+            <element signature="e#8684#8723#0" expanded="false" />
+            <element signature="e#8804#8925#0" expanded="false" />
+            <element signature="e#8948#8985#0" expanded="false" />
+            <element signature="e#9065#9184#0" expanded="false" />
+            <element signature="e#9243#9418#0" expanded="false" />
+            <element signature="e#9425#9458#0" expanded="false" />
+            <element signature="e#9477#10349#0" expanded="false" />
+            <element signature="e#10399#10560#0" expanded="false" />
+            <element signature="e#10598#11119#0" expanded="false" />
+            <element signature="e#11125#11153#0" expanded="false" />
+            <element signature="e#11183#11226#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/LogDistanceModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="3" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#424#942#0" expanded="false" />
+            <element signature="e#1142#1699#0" expanded="false" />
+            <element signature="e#1752#2058#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/FenwickModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#74#0" expanded="false" />
+            <element signature="e#149#226#0" expanded="false" />
+            <element signature="e#475#1252#0" expanded="false" />
+            <element signature="e#1316#1414#0" expanded="false" />
+            <element signature="e#1343#1410#0" expanded="false" />
+            <element signature="e#1460#1667#0" expanded="false" />
+            <element signature="e#1720#2911#0" expanded="false" />
+            <element signature="e#2967#4105#0" expanded="false" />
+            <element signature="e#4152#4338#0" expanded="false" />
+            <element signature="e#4387#5225#0" expanded="false" />
+            <element signature="e#5274#5438#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="4" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Stream.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/LogDistanceModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="3" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#424#942#0" expanded="false" />
+            <element signature="e#1142#1699#0" expanded="false" />
+            <element signature="e#1752#2058#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/NoModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#200#0" expanded="false" />
+            <element signature="e#311#379#0" expanded="false" />
+            <element signature="e#421#497#0" expanded="false" />
+            <element signature="e#448#493#0" expanded="false" />
+            <element signature="e#707#834#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Context1Model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+            <element signature="e#153#356#0" expanded="false" />
+            <element signature="e#415#460#0" expanded="false" />
+            <element signature="e#515#565#0" expanded="false" />
+            <element signature="e#569#593#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Lzp3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="57" column="6" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#1167#1613#0" expanded="false" />
+            <element signature="e#1656#1765#0" expanded="false" />
+            <element signature="e#1806#1857#0" expanded="false" />
+            <element signature="e#1905#2093#0" expanded="false" />
+            <element signature="e#2215#3281#0" expanded="false" />
+            <element signature="e#3285#3433#0" expanded="false" />
+            <element signature="e#3539#5926#0" expanded="false" />
+            <element signature="e#4046#4156#0" expanded="false" />
+            <element signature="e#4180#4210#0" expanded="false" />
+            <element signature="e#5931#5985#0" expanded="false" />
+            <element signature="e#6088#8171#0" expanded="false" />
+            <element signature="e#6750#6860#0" expanded="false" />
+            <element signature="e#6885#6915#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/RangeCoder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#1061#1383#0" expanded="false" />
+            <element signature="e#1577#2648#0" expanded="false" />
+            <element signature="e#2918#3064#0" expanded="false" />
+            <element signature="e#3552#3856#0" expanded="false" />
+            <element signature="e#3925#4197#0" expanded="false" />
+            <element signature="e#4286#4332#0" expanded="false" />
+            <element signature="e#4423#4465#0" expanded="false" />
+            <element signature="e#4558#4601#0" expanded="false" />
+            <element signature="e#4791#5828#0" expanded="false" />
+            <element signature="e#6081#6391#0" expanded="false" />
+            <element signature="e#6444#6875#0" expanded="false" />
+            <element signature="e#7294#7523#0" expanded="false" />
+            <element signature="e#7583#7869#0" expanded="false" />
+            <element signature="e#8280#8510#0" expanded="false" />
+            <element signature="e#8599#8709#0" expanded="false" />
+            <element signature="e#8798#8908#0" expanded="false" />
+            <element signature="e#8999#9111#0" expanded="false" />
+            <element signature="e#9191#9284#0" expanded="false" />
+            <element signature="e#9291#9315#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/FenwickModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#74#0" expanded="false" />
+            <element signature="e#149#226#0" expanded="false" />
+            <element signature="e#475#1252#0" expanded="false" />
+            <element signature="e#1316#1414#0" expanded="false" />
+            <element signature="e#1343#1410#0" expanded="false" />
+            <element signature="e#1460#1667#0" expanded="false" />
+            <element signature="e#1720#2911#0" expanded="false" />
+            <element signature="e#2967#4105#0" expanded="false" />
+            <element signature="e#4152#4338#0" expanded="false" />
+            <element signature="e#4387#5225#0" expanded="false" />
+            <element signature="e#5274#5438#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#getTime#0" expanded="false" />
+            <element signature="n#!!block;n#log#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding>
+            <element signature="e#258#1098#0" expanded="false" />
+            <element signature="e#433#550#0" expanded="false" />
+            <element signature="e#610#877#0" expanded="false" />
+            <element signature="e#1151#1244#0" expanded="false" />
+            <element signature="e#1363#1632#0" expanded="false" />
+            <element signature="e#1684#2077#0" expanded="false" />
+            <element signature="e#2453#3033#0" expanded="false" />
+            <element signature="e#2945#3007#0" expanded="false" />
+            <element signature="e#4598#5451#0" expanded="false" />
+            <element signature="e#4645#5444#0" expanded="false" />
+            <element signature="e#5571#5864#0" expanded="false" />
+            <element signature="e#5987#6250#0" expanded="false" />
+            <element signature="e#6257#6323#0" expanded="false" />
+            <element signature="e#6375#6848#0" expanded="false" />
+            <element signature="e#6855#6920#0" expanded="false" />
+            <element signature="e#6967#7240#0" expanded="false" />
+            <element signature="e#7339#7452#0" expanded="false" />
+            <element signature="e#7494#7543#0" expanded="false" />
+            <element signature="e#7882#7921#0" expanded="false" />
+            <element signature="e#8030#8068#0" expanded="false" />
+            <element signature="e#8147#8266#0" expanded="false" />
+            <element signature="e#8319#8397#0" expanded="false" />
+            <element signature="e#8420#8459#0" expanded="false" />
+            <element signature="e#8540#8661#0" expanded="false" />
+            <element signature="e#8684#8723#0" expanded="false" />
+            <element signature="e#8804#8925#0" expanded="false" />
+            <element signature="e#8948#8985#0" expanded="false" />
+            <element signature="e#9065#9184#0" expanded="false" />
+            <element signature="e#9243#9418#0" expanded="false" />
+            <element signature="e#9425#9458#0" expanded="false" />
+            <element signature="e#9477#10349#0" expanded="false" />
+            <element signature="e#10399#10560#0" expanded="false" />
+            <element signature="e#10598#11119#0" expanded="false" />
+            <element signature="e#11125#11153#0" expanded="false" />
+            <element signature="e#11183#11226#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/RangeCoderCompressor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="537" max-vertical-offset="2558">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#779#1247#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/lib.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="8453" max-vertical-offset="290136">
+          <caret line="566" column="4" selection-start-line="566" selection-start-column="4" selection-end-line="566" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rangeCoder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2242" max-vertical-offset="5480">
+          <caret line="231" column="0" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#makeRanges#0" expanded="false" />
+            <marker date="1423838372403" expanded="false" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423838372403" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423838372403" expanded="false" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423838372403" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423838372403" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423838372403" expanded="false" signature="-1:-1" placeholder="{...}" />
+            <marker date="1423838372403" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/huffman/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1613">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myrangecoder.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2491" max-vertical-offset="10172">
+          <caret line="134" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/huffman/binaryHeap.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2619" max-vertical-offset="3725">
+          <caret line="111" column="2" selection-start-line="111" selection-start-column="2" selection-end-line="111" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!block;n#BinaryHeap#0" expanded="true" />
+            <element signature="e#119#3257#0" expanded="true" />
+            <element signature="e#146#300#0" expanded="true" />
+            <element signature="e#320#689#0" expanded="true" />
+            <element signature="e#716#1355#0" expanded="true" />
+            <element signature="e#1376#1410#0" expanded="true" />
+            <element signature="e#1436#2067#0" expanded="true" />
+            <element signature="e#2093#3255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/huffman/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.59375" vertical-offset="0" max-vertical-offset="1527">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rangeCoder.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="9356" max-vertical-offset="10705">
+          <caret line="369" column="0" selection-start-line="318" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/huffman/huffman2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1456" max-vertical-offset="4246">
+          <caret line="305" column="22" selection-start-line="305" selection-start-column="22" selection-end-line="305" selection-end-column="22" />
+          <folding>
+            <element signature="e#11137#11944#0" expanded="true" />
+            <element signature="e#12020#12869#0" expanded="true" />
+            <marker date="1423843025532" expanded="true" signature="2563:13552" placeholder="{...}" />
+            <marker date="1423843025532" expanded="false" signature="3873:3984" placeholder="{...}" />
+            <marker date="1423843025532" expanded="false" signature="3874:3978" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/huffman/lzw.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2693">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <folding>
+            <element signature="n#!!block;n#decode#0;n#LZW#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/huffman/test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1201">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/huffman/huffman.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="649" max-vertical-offset="2537">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/huffman/huffman3.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30637" max-vertical-offset="42641">
+          <caret line="1372" column="27" selection-start-line="1372" selection-start-column="27" selection-end-line="1372" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/huffman/huffman2.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6154" max-vertical-offset="14345">
+          <caret line="242" column="32" selection-start-line="242" selection-start-column="32" selection-end-line="242" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#constructor#0;n#HTable#0" expanded="true" />
+            <element signature="n#!!block;n#clone#0;n#HTable#0" expanded="true" />
+            <element signature="n#!!block;n#set#0;n#HTable#0" expanded="true" />
+            <element signature="n#!!block;n#constructor#0;n#Huffman#0" expanded="true" />
+            <element signature="n#!!block;n#split#0;n#Huffman#0" expanded="true" />
+            <element signature="n#!!block;n#leader#0;n#Huffman#0" expanded="true" />
+            <element signature="n#!!block;n#slide#0;n#Huffman#0" expanded="true" />
+            <element signature="n#!!block;n#scale#0;n#Huffman#0" expanded="true" />
+            <element signature="n#!!block;n#sendid#0;n#Huffman#0" expanded="true" />
+            <element signature="n#!!block;n#encode#0;n#Huffman#0" expanded="true" />
+            <element signature="n#!!block;n#readid#0;n#Huffman#0" expanded="true" />
+            <element signature="n#!!block;n#decode#0;n#Huffman#0" expanded="true" />
+            <element signature="n#!!block;n#compressFile#0;n#Huffman#0" expanded="true" />
+            <element signature="n#!!block;n#decompressFile#0;n#Huffman#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/huffman/rangeCoder.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29742962" vertical-offset="0" max-vertical-offset="7108">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#972#1255#0" expanded="true" />
+            <element signature="e#1440#2261#0" expanded="true" />
+            <element signature="e#2519#2632#0" expanded="true" />
+            <element signature="e#3100#3341#0" expanded="true" />
+            <element signature="e#3407#3616#0" expanded="true" />
+            <element signature="e#3699#3736#0" expanded="true" />
+            <element signature="e#3821#3854#0" expanded="true" />
+            <element signature="e#3941#3975#0" expanded="true" />
+            <element signature="e#4156#5025#0" expanded="true" />
+            <element signature="e#5263#5519#0" expanded="true" />
+            <element signature="e#5569#5931#0" expanded="true" />
+            <element signature="e#6332#6534#0" expanded="true" />
+            <element signature="e#6591#6844#0" expanded="true" />
+            <element signature="e#7237#7416#0" expanded="true" />
+            <element signature="e#7499#7588#0" expanded="true" />
+            <element signature="e#7671#7760#0" expanded="true" />
+            <element signature="e#7845#7936#0" expanded="true" />
+            <element signature="e#8010#8088#0" expanded="true" />
+            <element signature="e#8092#8116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

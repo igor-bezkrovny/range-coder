@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/huffman/huffman.js" />
+        <item url="file://$PROJECT_DIR$/rangeCoder.js" />
+        <item url="file://$PROJECT_DIR$/huffman/huffman2.js" />
+        <item url="file://$PROJECT_DIR$/huffman/test.js" />
+        <item url="file://$PROJECT_DIR$/huffman/lzw.js" />
+        <item url="file://$PROJECT_DIR$/huffman/binaryHeap.js" />
+        <item url="file://$PROJECT_DIR$/huffman/huffman3.js" />
+        <item url="file://$PROJECT_DIR$/huffman/rangeCoder.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/huffman/huffman.js" />
+      <root url="file://$PROJECT_DIR$/rangeCoder.js" />
+      <root url="file://$PROJECT_DIR$/huffman/huffman2.js" />
+      <root url="file://$PROJECT_DIR$/huffman/test.js" />
+      <root url="file://$PROJECT_DIR$/huffman/lzw.js" />
+      <root url="file://$PROJECT_DIR$/huffman/binaryHeap.js" />
+      <root url="file://$PROJECT_DIR$/huffman/huffman3.js" />
+      <root url="file://$PROJECT_DIR$/huffman/rangeCoder.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

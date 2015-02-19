@@ -1,0 +1,48 @@
+#define  DO(n)	   for (int _=0; _<n; _++)
+#define  TOP	   (1<<24)
+#define  BOT	   (1<<16)
+
+class RangeCoder
+{
+ uint  low, code, range;
+
+public:
+
+ void StartEncode ( void )    
+ { 
+   low=0;  
+   range=(uint)-1; 
+ }
+
+ void StartDecode( void )    
+ { 
+   low=code=0;  
+   range=(uint)-1;
+   DO(4) code = (code<<8) | InpSrcByte();
+ }
+
+ void FinishEncode( void ) { DO(4) OutTgtByte(low>>24), low<<=8; }
+
+ void FinishDecode( void ) {}
+
+ void Encode (uint cumFreq, uint freq, uint totFreq) 
+ {
+    low  += cumFreq * (range/= totFreq);
+    range*= freq;
+    while ((low ^ low+range)<TOP || range<BOT && ((range= -low & BOT-1),1))
+       OutTgtByte(low>>24), range<<=8, low<<=8;
+ }
+
+ uint GetFreq (uint totFreq) {
+   uint tmp= (code-low) / (range/= totFreq);
+   return tmp;					       // a valid value :)
+ }
+
+ void Decode (uint cumFreq, uint freq, uint totFreq) {
+    low  += cumFreq*range;
+    range*= freq;
+    while ((low ^ low+range)<TOP || range<BOT && ((range= -low & BOT-1),1))
+       code = (code<<8) | InpSrcByte(), range<<=8, low<<=8;
+ }
+
+};

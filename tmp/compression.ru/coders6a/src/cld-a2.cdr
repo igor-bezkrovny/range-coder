@@ -1,0 +1,223 @@
+// *** Dword-oriented Rangecoder by Eugene D. Shelwien -- almost plain Asm
+
+__int64 rc_MaxRange = 0x7FFFFFFFFFFFFFFF;
+uint	rc_1shl32   = 0x4F800000;
+uint	rc_1shl63   = 0x5F000000;
+uint	rc_1shl64   = 0x5F800000;
+
+uint rc_LowH;
+uint rc_Low[2];
+uint rc_Carry;		// Low carry flag
+uint rc_FFNum;		// number of all-F dwords between Cache and Low
+uint rc_Cache;		// cached low dword
+
+
+class RangeCoder
+{
+
+public:
+
+ void StartEncode ()
+ {
+   rc_Cache=0;
+   rc_FFNum=0;
+   __asm		{
+
+			finit
+			push	edx
+			fstcw	word ptr [esp+0]
+			or	byte ptr [esp+1],1100b
+			fldcw	word ptr [esp+0]
+			pop	edx
+
+			// integer converter :)
+			fld	dword ptr rc_1shl63
+			// load 1.0 for rounding in encari
+			fld1
+			fadd	st(0),st(1) ; 1<<63+1
+			// Load Low=0 onto a fpu stack
+			fldz
+			fsub	dword ptr rc_1shl64 ; Low=-2^64
+			// Load Range=1.0 onto fpu stack
+			fild qword ptr rc_MaxRange
+			}
+ }
+
+
+ void StartDecode()
+ {
+   rc_Carry=0;
+   __asm		{
+
+			finit
+			push	edx
+			fstcw	word ptr [esp+0]
+			or	byte ptr [esp+1],1100b
+			fldcw	word ptr [esp+0]
+			pop	edx
+
+			// integer converter :)
+			fld	dword ptr rc_1shl63
+			// load 1.0 for rounding in encari
+			fld1
+			fadd	st(0),st(1) ; 1<<63+1
+			// Preinit Code with 0.0
+			fldz
+			// Load Range=1.0 onto fpu stack
+			fild qword ptr rc_MaxRange
+			}
+   ShiftCode();
+   ShiftCode();
+   ShiftCode();
+ }
+
+
+ void FinishEncode( void )
+ {
+   _asm 		{
+			fld1
+			faddp st(2),st(0) // Low+=1
+			}
+   ShiftLow();
+   ShiftLow();
+   ShiftLow();
+ }
+
+
+ void FinishDecode( void ){}
+
+
+ inline void Encode(uint cumFreq, uint freq, uint totFreq)
+ {
+   uint HaiFreq[2]; HaiFreq[1] = cumFreq+freq;
+   _asm 		{
+			fidiv	totFreq ; get Range/totFreq
+			fld	st(0)
+			fimul	dword ptr HaiFreq+4 // (Range/Total)*H
+			fxch	st(1)	    // Range/Total, ^, 1
+			fimul	cumFreq     // (Range/Total)*L
+			fadd	st(0),st(3) // LH+=1<<63+1
+			fsub	st(0),st(4) // LH-=1<<63
+			fadd	st(2),st(0) // Low+=LH
+			fsubp	st(1),st(0) // Range=HL-LH
+			fist	dword ptr HaiFreq+4
+			cmp	dword ptr HaiFreq+4,0
+			jge	NeedShiftLow
+			}
+QuitEncode: 		return;
+NeedShiftLow:
+  _asm {		fmul	dword ptr rc_1shl32 }
+			ShiftLow();
+  _asm {		jmp	QuitEncode }
+ }
+
+
+
+inline void ShiftLow( void )
+{
+  _asm			{
+			fxch	st(1)
+			fst	dword ptr rc_LowH ; to determine sign
+			xor	ecx,ecx  ; Carry=0
+			cmp	rc_LowH,0
+			jns	Bit64eq1
+			fadd	st(0),st(3) ; Low+=2^63 -> -2^63..2^63-1
+Bit64eq0:		sub	esp,8
+			fistp	qword ptr [esp+0]
+			pop	eax
+			pop	edx
+			xor	eax,80000000h
+			xor	edx,80000000h
+			push	eax
+			push	0
+			mov	dword ptr rc_LowH,edx
+			fild	qword ptr [esp+0]
+			add	esp,8
+			fsub	st(0),st(3)
+			fxch	st(1)
+
+			cmp	edx,0FFFFFFFFh
+			jz	IncrementFFNum
+
+			dec	ecx
+			mov	rc_Carry,ecx ; (-1) if carry=0, 0 else
+			}
+			OutTgtDword( rc_Cache );
+  _asm		{	cmp	rc_FFNum,0
+			jnz	StoreFFRun	}
+SkipFFRun: _asm {	mov	eax,rc_LowH
+			mov	rc_Cache,eax	}
+
+			return;
+
+Bit64eq1: _asm		{
+			; 0..2^64-1
+			inc	ecx	; Carry=1
+			inc	rc_Cache
+			fsub	st(0),st(3)
+			jmp	Bit64eq0
+			}
+
+StoreFFRun:		OutTgtDword( rc_Carry );
+  _asm		{	dec	rc_FFNum
+			jnz	StoreFFRun
+			jmp	SkipFFRun	}
+
+IncrementFFNum: 	rc_FFNum++;
+
+}
+
+
+ inline uint GetFreq (uint totFreq)
+ {
+   _asm 		{
+			fild	totFreq
+			fmul	st(0),st(2) ; ChTotal * Code
+			fdiv	st(0),st(1) ; /Range
+			fistp	totFreq
+			}
+   return totFreq;
+ }
+
+
+
+ inline void Decode(uint cumFreq, uint freq, uint totFreq)
+ {
+   uint HaiFreq[2]; HaiFreq[1] = cumFreq+freq;
+   _asm 		{
+			fidiv   totFreq     // Range/=Total
+			fld	st(0)
+			fimul	dword ptr HaiFreq+4  // (Range/Total)*H
+			fxch	st(1)	    // Range/Total, ^, 1
+			fimul	cumFreq     // (Range/Total)*L
+			fadd	st(0),st(3) // LH+=1<<63+1
+			fsub	st(0),st(4) // LH-=1<<63
+			fsub	st(2),st(0) // Code-=LH
+			fsubp	st(1),st(0) // Range=HL-LH
+			fist	dword ptr HaiFreq+4
+			cmp	dword ptr HaiFreq+4,0
+			jge	NeedShiftCode
+			}
+			return;
+NeedShiftCode:
+  _asm {		fmul	dword ptr rc_1shl32 }
+			ShiftCode();
+ }
+
+
+ inline void ShiftCode( void )
+ {
+   _asm 		{
+			fxch	st(1) // integer Code <2^32
+			fistp	dword ptr rc_Low+4
+			}
+   rc_Low[0] = InpSrcDword();
+   _asm 		{
+			fild	qword ptr rc_Low+0 ; -2^63..2^63-1
+			fxch	st(1) // put it back
+			}
+ }
+
+
+};
+

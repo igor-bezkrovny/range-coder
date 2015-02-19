@@ -1,0 +1,109 @@
+#define  DO(n)	   for (int _=0; _<n; _++)
+#define  TOP	   (1<<24)
+#define  BOT	   (1<<16)
+
+uint range;
+struct RangeCoder
+{
+ uint  low, code, FFNum, Cache, Carry;
+
+ inline uint muldivR( uint a, uint b )
+ { 
+//   uint r;
+   __asm		{
+			mov	eax,a
+			mul	b
+			div	range
+//			mov	r,eax
+			}
+//   return r;
+ }
+
+ inline uint mulRdiv( uint a, uint c )
+ { 
+//   uint r;
+   __asm		{
+			mov	eax,a
+			mul	range
+			div	c
+//			mov	r,eax
+			}
+//   return r;
+ }
+
+
+ void StartEncode( void )    
+ { low=FFNum=Cache=Carry=0;  range=(uint)-1; }
+
+ void StartDecode( void )
+ { 
+   low=code=0; 
+   range=(uint)-1;
+   DO(5) code=(code<<8) | InpSrcByte();
+ }
+
+ void FinishEncode( void )	       
+ { 
+   low+=1; if (low==0) Carry++;
+   DO(5) ShiftLow();
+ }
+
+ void FinishDecode( void ) {}
+
+
+ inline void Encode(uint cumFreq, uint freq, uint totFreq)
+ {
+   uint tmp = mulRdiv( cumFreq, totFreq ) + 1;
+   low += tmp;
+   if (low<tmp) Carry++;
+   range = mulRdiv( cumFreq+freq, totFreq ) - tmp;
+   
+   while ( range<TOP )
+   {
+     range <<= 8;
+//     range = (range<<8)+255;
+     ShiftLow();
+   }
+ }
+
+ inline void ShiftLow( void )
+ {
+   if ( Carry==0 )
+     if ( low<(uint)0xFF000000 )
+     {
+       OutTgtByte( Cache );
+       for (;FFNum != 0;FFNum--) OutTgtByte(0xFF);
+       Cache = low>>24;
+     } else FFNum++;
+   else {
+     OutTgtByte( Cache+1 ); Carry=0;
+     for (;FFNum != 0;FFNum--) OutTgtByte(0x00);
+     Cache = low>>24;
+   }
+   low <<= 8;
+ }
+
+
+ uint GetFreq (uint totFreq) {
+   return muldivR( code-low, totFreq );
+ }
+
+
+ void Decode (uint cumFreq, uint freq, uint totFreq)
+ {
+   uint tmp = mulRdiv( cumFreq, totFreq ) + 1;
+   low += tmp;
+   range = mulRdiv( cumFreq+freq, totFreq ) - tmp;
+   while ( range<TOP )
+   {
+     code = (code<<8) | InpSrcByte();
+     low <<= 8;
+     range <<= 8;
+//     range = (range<<8)+255;
+   }
+ }
+
+// ShD  05-05-2l  Arith reimplemented using muldiv asm, precision improved.
+//		  Speed decreased :). MaxFreq was 2^17, now is 2^24-1. Good.
+};
+

@@ -1,0 +1,70 @@
+/*
+ *  Carryless rangecoder (c) 1999 by Dmitry Subbotin
+ *  Return of the Carry (c) 2001 by Leonid Broukhis
+ */
+
+#define  TopValue    (1<<24)
+#define  BotValue    (1<<16)
+#define DO(n)  for(int _=0; _<n; _++)
+typedef unsigned int uint;
+typedef unsigned char uc;
+
+class RangeCoder
+{
+
+ uint  low, code, range, extra;
+ uc held;
+
+ void OutByte (uc c)           { OutTgtByte(c); }
+ uc   InByte ()                { return InpSrcByte(); }
+
+public:
+ void StartEncode ()           { low=extra=0;  range= (uint) -1; }
+ void FinishEncode ()          { if (extra) {
+                                    OutByte(held);
+                                    while(--extra)
+                                        OutByte(low>>24);
+                                 }
+                                 DO(4)  OutByte(low>>24), low<<=8; }
+
+ void FinishDecode( void ) {}
+
+
+ void StartDecode ()           { low=code=extra=0;
+                                 range= (uint) -1;
+                                 DO(4) code= code<<8 | InByte();
+                               }
+   void Encode (uint cum_freq, uint freq, uint tot_freq) {
+    low+= cum_freq*(range/=tot_freq);
+    range*= freq;
+    while ((low ^ low+range) < TopValue || range < BotValue) {
+        if ((low ^ low+range) < TopValue) {
+                // carry not possible (anymore)
+                if (extra) {
+                        // guess what? low>>24 is either 0xff or 0 now
+                        OutByte(held + 1 + (low >> 24));
+                        while (--extra) OutByte(low>>24);
+                }
+                OutByte(low>>24);
+        } else { // carry (still) possible
+                if (!extra)
+                        held = low>>24;
+                extra++;
+        }
+       range<<=8, low<<=8;
+    }
+ }
+ uint GetFreq (uint tot_freq) {
+   uint tmp= (code-low)/(range/=tot_freq);
+   if (tmp >= tot_freq)  throw ("Input data corrupt");
+   return tmp;
+ }
+
+ void Decode (uint cum_freq, uint freq, uint tot_freq) {
+    low+= cum_freq*range;
+    range*= freq;
+
+    while ((low ^ low+range) < TopValue || range < BotValue)
+       code= code<<8 | InByte(), range<<=8, low<<=8;
+ }
+};

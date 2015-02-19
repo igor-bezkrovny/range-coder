@@ -1,0 +1,134 @@
+// 25/09/2l
+//   Plain Ari by A.Filinsky, 
+//   Translated into C++ by E.Shelwien
+
+const uint CodeValueBits = 31; // Количество битов кода
+const uint FirstQtr      = 1 << (CodeValueBits - 2);
+const uint Half          = 2 * FirstQtr;
+const uint ThirdQtr      = 3 * FirstQtr;
+const uint TopValue      = Half - 1 + Half;
+
+class RangeCoder
+{
+ uint Low, High, Value, BitsToFollow;
+ uc Buffer,Bits;
+
+public:
+
+ uint MulDiv( uint A, uint B, uint C )
+ {
+  __asm                 {
+			mov	eax,A
+			mul	B
+			div	C
+			}
+ }
+
+ uint MulDecDiv( uint A, uint B, uint C )
+ {
+  __asm                 {
+			mov	eax,A
+			mul	B
+			sub	eax,1
+			sbb	edx,0
+			div	C
+			}
+ }
+
+ void OutBit( int Bit )
+ {
+   Buffer += Bits & Bit;
+   Bits <<= 1;
+   if (Bits==0) OutTgtByte(Buffer), Buffer=0, Bits=1;
+ }
+
+
+ void BitPlusFollow( int Bit )
+ {
+   OutBit( Bit );
+   while( BitsToFollow ) OutBit(~Bit), BitsToFollow--;
+ }
+
+
+ void StartEncode( void )    
+ { 
+   Low = 0; BitsToFollow = 0;
+   High = TopValue;
+   Buffer = 0; Bits = 1;
+ }
+
+ void FinishEncode( void )
+ { 
+   BitsToFollow++;
+   Low<FirstQtr ? BitPlusFollow(0) : BitPlusFollow(-1);
+   OutTgtByte( Buffer );
+ }
+
+ void Encode(uint cumFreq, uint freq, uint totFreq)
+ { uint Range;
+   Range = High - Low + 1;
+   High  = Low + MulDiv( Range, cumFreq+freq, totFreq ) - 1;
+   Low   = Low + MulDiv( Range, cumFreq,      totFreq );
+   while(1){
+     if (High<Half)
+       BitPlusFollow(0);
+     else if (Low>=Half)
+       BitPlusFollow(-1),Low-=Half,High-=Half;
+     else if ( (Low>=FirstQtr)&&(High<ThirdQtr) )
+       BitsToFollow++, Low-=FirstQtr, High-=FirstQtr;
+     else
+       break;
+     Low<<=1, High=High+High+1;
+   }
+ }
+
+
+ void StartDecode( void )
+ { 
+   Bits = 0; 
+   Value = 0;
+   
+   Low = 0;
+   High = TopValue;
+
+   for( int i=1; i<=CodeValueBits; i++ ) 
+     Value = Value+Value + InputBit();
+ }
+
+ void FinishDecode( void ) {}
+
+
+ int InputBit( void ) {
+   if (Bits==0) Buffer=InpSrcByte(), Bits=8;
+   int r = Buffer&1;
+   Buffer>>=1;
+   Bits--;
+   return r;
+ }
+
+ uint GetFreq (uint totFreq) {
+   return MulDecDiv( Value-Low+1, totFreq, High-Low+1 );
+ }
+
+
+ void Decode( uint cumFreq, uint freq, uint totFreq )
+ { uint Range;
+   Range = High - Low + 1;
+   High  = Low + MulDiv( Range, cumFreq+freq, totFreq ) - 1;
+   Low   = Low + MulDiv( Range, cumFreq,      totFreq );
+   while(1){
+     if (High<Half) 
+       {}
+     else if (Low>=Half)
+       Value-=Half,Low-=Half,High-=Half;
+     else if ( (Low>=FirstQtr)&&(High<ThirdQtr) )
+       Value-=FirstQtr, Low-=FirstQtr, High-=FirstQtr;
+     else
+       break;
+     Low<<=1, High+=High+1; Value+=Value+InputBit();
+   }
+
+ }
+
+};
+
