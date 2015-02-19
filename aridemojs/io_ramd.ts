@@ -35,3 +35,47 @@ inline void FlushTgtBuf( FILE* TargetFile )
   fwrite(TargetBuf, TgtPtr, 1, TargetFile);
 }
 
+module ARIDEMO  {
+	class IO_RAMD {
+		private _sourcePosition : number;
+		private _source : number[];
+		private _target : number[];
+		constructor (data : number[]) {
+			this._sourcePosition = 0;
+			this._source = data;
+			this._target = [];
+		}
+
+		public writeByte(byte : number) {
+			this._target.push(byte);
+		}
+
+		public writeDWORD(dword : number) {
+			this.writeByte(dword & 0xFF);
+			this.writeByte((dword>>8) & 0xFF);
+			this.writeByte((dword>>16) & 0xFF);
+			this.writeByte((dword>>24) & 0xFF);
+		}
+
+		public readByte(byte : number) {
+			return this._source[this._sourcePosition++];
+		}
+
+		public writeDWORD(dword : number) {
+			this.writeByte(dword & 0xFF);
+			this.writeByte((dword>>8) & 0xFF);
+			this.writeByte((dword>>16) & 0xFF);
+			this.writeByte((dword>>24) & 0xFF);
+		}
+
+		public readDWORD(byte : number) {
+			var b1 = this.readByte(),
+				b2 = this.readByte(),
+				b3 = this.readByte(),
+				b4 = this.readByte();
+
+			return b1 + (b2 << 8) + (b3 << 16) + (b4 << 24);
+		}
+
+	}
+}
