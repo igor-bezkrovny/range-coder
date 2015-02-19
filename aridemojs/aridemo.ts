@@ -1,22 +1,6 @@
 typedef unsigned int  uint;
 typedef unsigned char uc;
 
-#include "tsctimer.inc"
-
-#define  IOModel "io_ramd.inc"
-#define  Model   "o0c_v2a.inc"
-
-//#define  Coder   "beeari.cdr"
-#define  Coder   "clrf.cdr"
-//#define  Coder   "clr.cdr"
-//#define  Coder   "shindlet.cdr"
-//#define  Coder   "shcoder.cdr"
-//#define  Coder   "CLD-A2.cdr"
-//#define  Coder   "subbotin.cdr"
-//#define  Coder   "subb_lb.cdr"
-
-#include IOModel
-#include Coder
 static RangeCoder rc;
 
 #ifndef rc_StartEncode
