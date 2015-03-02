@@ -1,180 +1,175 @@
 ///<reference path="./subbotin.ts"/>
 module RANGECODER {
 
-	var RADIX_64_BASE = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/_';
-	var alphabet = RADIX_64_BASE.length;
-
 	var WSIZ : number = 1 << 11,
 		STEP : number = 8;
 
 	interface STATISTICS {
-		Symbol : number; // uint
-		Freq : number; // uint
+		symbol : number;
+		freq : number;
 	}
 
 	export class ORDER_0_CODER {
-		private SummFreq : number; // uint
-		private EscFreq : number; // uint
-		private NumSyms : number; // uint
+		private _cumulativeFrequency : number;
+		private _escFrequency : number;
+		private _symbolsNumber : number;
 		private _rc : RangeCoder;
+		private _alphabetSize : number;
+		private _alphabet : number[];
 
-		private Stats : STATISTICS[];
+		private _statistics : STATISTICS[];
 
-		constructor(rc : RangeCoder) {
+		constructor(rc : RangeCoder, alphabet? : any) {
+			var i : number;
+
 			this._rc = rc;
-			this.SummFreq = this.EscFreq = 1;
-			this.NumSyms = 0;
-			this.Stats = new Array(alphabet + 1);
-			for (var i = 0; i < alphabet + 1; i++) {
-				this.Stats[ i ] = {
-					Symbol: i,
-					Freq  : 0
+			this._cumulativeFrequency = this._escFrequency = 1;
+			this._symbolsNumber = 0;
+
+			if (typeof alphabet === "undefined") {
+				this._alphabet = [];
+				for (i = 0; i < 256; i++) this._alphabet[ i ] = i;
+			} else if (typeof alphabet === "number") {
+				this._alphabet = [];
+				for (i = 0; i < alphabet; i++) this._alphabet[ i ] = i;
+			} else if (Object.prototype.toString.call(alphabet) === "[object Array]") {
+				this._alphabet = alphabet;
+			} else if (typeof alphabet === "string") {
+				this._alphabet = alphabet.split("").map(function (ch) {
+					return ch.charCodeAt(0);
+				});
+			}
+			this._alphabetSize = this._alphabet.length;
+
+			this._statistics = new Array(this._alphabetSize + 1);
+			for (i = 0; i < this._alphabetSize + 1; i++) {
+				this._statistics[ i ] = {
+					symbol: i,
+					freq  : 0
 				};
 			}
 		}
 
-		// good
 		private sortSymbolsRare() {
 			var index = 1,
 				p;
 
-			//console.log("sortSymbolsRare start");
-			while ((p = this.Stats[ index ]).Freq !== 0) {
-				if (this.Stats[ index ].Freq > this.Stats[ index - 1 ].Freq) {
-					//console.log("" + index);
+			while ((p = this._statistics[ index ]).freq !== 0) {
+				if (this._statistics[ index ].freq > this._statistics[ index - 1 ].freq) {
 					var index1 = index,
-						tmp = this.Stats[ index1 ];
+						tmp = this._statistics[ index1 ];
 
 					do {
-						this.Stats[ index1 ] = this.Stats[ index1 - 1 ];
+						this._statistics[ index1 ] = this._statistics[ index1 - 1 ];
 						index1--;
-					} while (index1 > 0 && tmp.Freq > this.Stats[ index1 - 1 ].Freq);
-					this.Stats[ index1 ] = tmp;
+					} while (index1 > 0 && tmp.freq > this._statistics[ index1 - 1 ].freq);
+					this._statistics[ index1 ] = tmp;
 				}
 
 				index++;
 			}
-			//console.log("sortSymbolsRare end");
 		}
 
 		private rescaleRare() {
 			this.sortSymbolsRare();
-			this.SummFreq = 0;
+			this._cumulativeFrequency = 0;
 
 			var index = 0,
 				p;
 
-			while ((p = this.Stats[ index ]).Freq !== 0) {
-				if ((p.Freq >>= 1) !== 0) {
-					this.SummFreq += p.Freq;
+			while ((p = this._statistics[ index ]).freq !== 0) {
+				if ((p.freq >>= 1) !== 0) {
+					this._cumulativeFrequency += p.freq;
 				} else {
-					this.EscFreq++;
-					this.NumSyms--;
+					this._escFrequency++;
+					this._symbolsNumber--;
 				}
 
 				index++;
 			}
-			this.EscFreq -= this.EscFreq >> 1;
-			this.SummFreq += this.EscFreq;
+			this._escFrequency -= this._escFrequency >> 1;
+			this._cumulativeFrequency += this._escFrequency;
 		}
 
-		public encodeSymbol(sym : number /* uint */) : void {
-			sym = RADIX_64_BASE.indexOf(String.fromCharCode(sym));
-			if (this.SummFreq > WSIZ) {
-				//console.log("encodeSymbol: rescale");
+		public encodeSymbol(sym : number) : void {
+			var symInAlphabet : number = this._alphabet.indexOf(sym);
+			if (symInAlphabet < 0) {
+				throw new Error("[encodesymbol] symbol " + sym + " is not in alphabet");
+			}
+
+			if (this._cumulativeFrequency > WSIZ) {
 				this.rescaleRare();
 			}
 
-			//STATISTICS* p = Stats-1;
-			//while ( (++p)->Symbol!=sym ) LoCount+=p->Freq;
-
 			var LoCount : number = 0,
-				index = 0; // uint
+				index = 0;
 
-			for (; this.Stats[ index ].Symbol !== sym; index++) {
-				LoCount += this.Stats[ index ].Freq;
+			for (; this._statistics[ index ].symbol !== symInAlphabet; index++) {
+				LoCount += this._statistics[ index ].freq;
 			}
-			//console.log("encodeSymbol LoCount = " + LoCount);
-			var p = this.Stats[ index ];
-			if (!p.Freq) {
-				//console.log("Encode1: " + LoCount + "," + this.EscFreq + "," + this.SummFreq);
-				this._rc.Encode(LoCount, this.EscFreq, this.SummFreq);
-				//console.log("encodeSymbol1 data: " + (index - this.NumSyms) + "," + (256 + 1 - this.NumSyms));
-				//console.log("Encode Data: " + index + "," + this.NumSyms);
-				this._rc.Encode(index - this.NumSyms, 1, alphabet + 1 - this.NumSyms);
-				p.Freq = (STEP / 2) | 0;
-				this.EscFreq += (STEP / 2) | 0;
-				this.SummFreq += STEP;
-				//SWAP(*p,Stats[NumSyms++]);
-				this.Stats[ index ] = this.Stats[ this.NumSyms ];
-				this.Stats[ this.NumSyms ] = p;
-				this.NumSyms++;
 
+			var p = this._statistics[ index ];
+			if (!p.freq) {
+				this._rc.Encode(LoCount, this._escFrequency, this._cumulativeFrequency);
+				this._rc.Encode(index - this._symbolsNumber, 1, this._alphabetSize + 1 - this._symbolsNumber);
+				p.freq = (STEP / 2) | 0;
+				this._escFrequency += (STEP / 2) | 0;
+				this._cumulativeFrequency += STEP;
+				this._statistics[ index ] = this._statistics[ this._symbolsNumber ];
+				this._statistics[ this._symbolsNumber ] = p;
+				this._symbolsNumber++;
 				this.sortSymbolsRare();
-				//console.log("1");
 			} else {
-				this._rc.Encode(LoCount, p.Freq, this.SummFreq);
-				//console.log("encodeSymbol2 data: " + p.Freq + "," + this.SummFreq);
-				p.Freq += STEP;
-				this.SummFreq += STEP;
+				this._rc.Encode(LoCount, p.freq, this._cumulativeFrequency);
+				p.freq += STEP;
+				this._cumulativeFrequency += STEP;
 			}
 		}
 
 		public decodeSymbol() : number {
-			if (this.SummFreq > WSIZ) {
-				//console.log("decodeSymbol: rescale");
+			if (this._cumulativeFrequency > WSIZ) {
 				this.rescaleRare();
 			}
 
-			var	count : number = this._rc.GetFreq(this.SummFreq),
+			var count : number = this._rc.GetFreq(this._cumulativeFrequency),
 				index,
 				p,
-				result; // uint
+				result;
 
-			//console.log("GetFreq: " + count);
+			if (count >= this._cumulativeFrequency - this._escFrequency) {
+				this._rc.Decode(this._cumulativeFrequency - this._escFrequency, this._escFrequency, this._cumulativeFrequency);
 
-			if (count >= this.SummFreq - this.EscFreq) {
-				//console.log("Decode 1: " + (this.SummFreq - this.EscFreq) + "," + this.EscFreq + "," + this.SummFreq);
-				this._rc.Decode(this.SummFreq - this.EscFreq, this.EscFreq, this.SummFreq);
+				index = this._symbolsNumber + this._rc.GetFreq(this._alphabetSize + 1 - this._symbolsNumber);
+				p = this._statistics[ index ];
 
-				index = this.NumSyms + this._rc.GetFreq(alphabet + 1 - this.NumSyms); //STATISTICS* p=Stats+NumSyms+rc_GetFreq(256+1-NumSyms);
-				p = this.Stats[ index ];
-
-
-				var sym : number = p.Symbol; // uint
-				//console.log("Decode2: " + (index - this.NumSyms) + "," + 1 + "," + (256 + 1 - this.NumSyms));
-				this._rc.Decode(index - this.NumSyms, 1, alphabet + 1 - this.NumSyms);
-				//console.log("Decode Data: " + index + "," + this.NumSyms);
-				p.Freq = (STEP / 2) | 0;
-				this.EscFreq += (STEP / 2) | 0;
-				this.SummFreq += STEP;
-				//SWAP(*p,Stats[NumSyms++]);
-				this.Stats[ index ] = this.Stats[ this.NumSyms ];
-				this.Stats[ this.NumSyms ] = p;
-				this.NumSyms++;
+				var sym : number = p.symbol;
+				this._rc.Decode(index - this._symbolsNumber, 1, this._alphabetSize + 1 - this._symbolsNumber);
+				p.freq = (STEP / 2) | 0;
+				this._escFrequency += (STEP / 2) | 0;
+				this._cumulativeFrequency += STEP;
+				this._statistics[ index ] = this._statistics[ this._symbolsNumber ];
+				this._statistics[ this._symbolsNumber ] = p;
+				this._symbolsNumber++;
 
 				this.sortSymbolsRare();
-
-				//console.log("sym = " + sym);
 				result = sym;
 			} else {
-				var HiCount : number = 0; // uint
+				var HiCount : number = 0;
 
 				index = 0;
-				while ((HiCount += this.Stats[ index ].Freq) <= count) index++;
+				while ((HiCount += this._statistics[ index ].freq) <= count) index++;
 
-				p = this.Stats[ index ];
-
-				this._rc.Decode(HiCount - p.Freq, p.Freq, this.SummFreq);
-				p.Freq += STEP;
-				this.SummFreq += STEP;
-
-				//console.log("p.sym = " + p.Symbol);
-				result = p.Symbol;
+				p = this._statistics[ index ];
+				this._rc.Decode(HiCount - p.freq, p.freq, this._cumulativeFrequency);
+				p.freq += STEP;
+				this._cumulativeFrequency += STEP;
+				result = p.symbol;
 			}
 
-			result = RADIX_64_BASE.charCodeAt(result);
-			return result;
+			if (result < 0 || result >= this._alphabetSize) {
+				throw new Error("[decodesymbol] symbol index " + result + " is out of alphabet size");
+			}
+			return this._alphabet[ result ];
 		}
 
 	}
